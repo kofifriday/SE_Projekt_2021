@@ -11,12 +11,12 @@ def create_app(test_config=None):
         DATABASE=os.path.join(app.instance_path, 'src.postgresql'),
     )
 
-    if test_config is None:
-        # load instance config, if it exists when not testing
-        app.config.from_mapping('config.py', silent=True)
-    else:
-        # load test config
-        app.config.from_mapping(test_config)
+    # if test_config is None:
+    #     # load instance config, if it exists when not testing
+    #     app.config.from_mapping('config.py', silent=True)
+    # else:
+    #     # load test config
+    #     app.config.from_mapping(test_config)
 
     # ensure the instance folder exists
     try:
